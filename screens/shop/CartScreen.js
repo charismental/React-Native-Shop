@@ -31,7 +31,7 @@ const CartScreen = props => {
                 keyExtractor={item => item.productId}
                 renderItem={itemData => {
                     const { productTitle, sum, quantity, productId } = itemData.item;
-                    return <CartItem title={productTitle} amount={sum} quantity={quantity} onRemove={()=> dispatch(cartActions.removeFromCart(productId))} />
+                    return <CartItem deletable title={productTitle} amount={sum} quantity={quantity} onRemove={()=> dispatch(cartActions.removeFromCart(productId))} />
                 }}
             />
         </View>
