@@ -4,13 +4,21 @@ import { Platform } from 'react-native';
 
 import Colors from '../constants/Colors';
 import ProductOverviewScreen from '../screens/shop/ProductsOverviewScreen';
+import ProductDetailScreen from '../screens/shop/ProductDetailScreen';
 
 const ProductsNavigator = createStackNavigator({
     ProductsOverview: ProductOverviewScreen,
+    ProductDetail: ProductDetailScreen,
 }, {
     defaultNavigationOptions: {
         headerStyle: {
             backgroundColor: Platform.OS === 'android' && Colors.primary,
+        },
+        headerTitleStyle: {
+            fontFamily: 'open-sans-bold',
+        },
+        headerBackTitleStyle: {
+            fontFamily: 'open-sans',
         },
         headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primary,
     },
